@@ -1369,6 +1369,14 @@ label, label + * {
     text-align: center;
 }
 
+/* Fix para DM NOT SHOW FOOTER INFO*/
+.footer-upper-first{
+    display: none;
+}
+.footer-upper{
+    display: none;
+}
+
 .footer-upper, .footer-upper-first {
     width: auto;
     margin: auto;
