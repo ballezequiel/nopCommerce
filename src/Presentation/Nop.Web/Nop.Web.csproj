@@ -29,12 +29,38 @@
     <!-- We copy the entire \App_Data directory. But we ignore JSON files and data protection keys  -->
     <Content Include="App_Data\**" CopyToPublishDirectory="PreserveNewest" Exclude="App_Data\*.json" />
     <Content Remove="App_Data\*.json" />
+    <Content Remove="Plugins\ExchangeRate.EcbExchange\**" />
+    <Content Remove="Plugins\Misc.SendinBlue\**" />
+    <Content Remove="Plugins\Payments.PayPalSmartPaymentButtons\**" />
+    <Content Remove="Plugins\Shipping.UPS\**" />
+    <Content Remove="Plugins\Widgets.FacebookPixel\**" />
     <Content Update="App_Data\DataProtectionKeys\*.xml" CopyToPublishDirectory="Never" />
 
     <Compile Remove="Plugins\**;Themes\**" />
+
+    <Compile Remove="Plugins\ExchangeRate.EcbExchange\**" />
+
+    <Compile Remove="Plugins\Misc.SendinBlue\**" />
+
+    <Compile Remove="Plugins\Payments.PayPalSmartPaymentButtons\**" />
+
+    <Compile Remove="Plugins\Shipping.UPS\**" />
+
+    <Compile Remove="Plugins\Widgets.FacebookPixel\**" />
     <Content Remove="Plugins\**;Themes\**" />
     <EmbeddedResource Remove="Plugins\**;Themes\**" />
+    <EmbeddedResource Remove="Plugins\ExchangeRate.EcbExchange\**" />
+    <EmbeddedResource Remove="Plugins\Misc.SendinBlue\**" />
+    <EmbeddedResource Remove="Plugins\Payments.PayPalSmartPaymentButtons\**" />
+    <EmbeddedResource Remove="Plugins\Shipping.UPS\**" />
+    <EmbeddedResource Remove="Plugins\Widgets.FacebookPixel\**" />
     <None Remove="Plugins\**;Themes\**" />
+    <None Remove="Plugins\ExchangeRate.EcbExchange\**" />
+    <None Remove="Plugins\Misc.SendinBlue\**" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\**" />
+    <None Remove="Plugins\Shipping.UPS\**" />
+    <None Remove="Plugins\Widgets.FacebookPixel\**" />
+    <Content Include="App_Data\dataSettings.json" />
 
     <Content Include="Plugins\bin\placeholder.txt" CopyToPublishDirectory="PreserveNewest" />
     <None Include="Plugins\**" CopyToPublishDirectory="PreserveNewest" />
@@ -44,6 +70,60 @@
 
     <!-- We copy the \Logs directory -->
     <Content Include="Logs\**" CopyToPublishDirectory="PreserveNewest" />
+    <None Remove="Plugins\ExchangeRate.EcbExchange\logo.jpg" />
+    <None Remove="Plugins\ExchangeRate.EcbExchange\Nop.Plugin.ExchangeRate.EcbExchange.deps.json" />
+    <None Remove="Plugins\ExchangeRate.EcbExchange\Nop.Plugin.ExchangeRate.EcbExchange.dll" />
+    <None Remove="Plugins\ExchangeRate.EcbExchange\Nop.Plugin.ExchangeRate.EcbExchange.pdb" />
+    <None Remove="Plugins\ExchangeRate.EcbExchange\plugin.json" />
+    <None Remove="Plugins\Misc.SendinBlue\Content\styles.css" />
+    <None Remove="Plugins\Misc.SendinBlue\logo.png" />
+    <None Remove="Plugins\Misc.SendinBlue\Nop.Plugin.Misc.SendinBlue.deps.json" />
+    <None Remove="Plugins\Misc.SendinBlue\Nop.Plugin.Misc.SendinBlue.dll" />
+    <None Remove="Plugins\Misc.SendinBlue\Nop.Plugin.Misc.SendinBlue.pdb" />
+    <None Remove="Plugins\Misc.SendinBlue\plugin.json" />
+    <None Remove="Plugins\Misc.SendinBlue\RestSharp.dll" />
+    <None Remove="Plugins\Misc.SendinBlue\SendinBlue.ClientV3.45.dll" />
+    <None Remove="Plugins\Misc.SendinBlue\SendinBlueMarketingAutomation.dll" />
+    <None Remove="Plugins\Misc.SendinBlue\Views\Configure.cshtml" />
+    <None Remove="Plugins\Misc.SendinBlue\Views\PublicInfo.cshtml" />
+    <None Remove="Plugins\Misc.SendinBlue\Views\_ViewImports.cshtml" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\BraintreeHttp-Dotnet.dll" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\logo.png" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\Nop.Plugin.Payments.PayPalSmartPaymentButtons.deps.json" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\Nop.Plugin.Payments.PayPalSmartPaymentButtons.dll" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\Nop.Plugin.Payments.PayPalSmartPaymentButtons.pdb" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\PayPalCheckoutSdk.dll" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\PayPalHttp-Dotnet.dll" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\plugin.json" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\runtimes\win-arm64\native\sni.dll" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\runtimes\win-x64\native\sni.dll" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\runtimes\win-x86\native\sni.dll" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\Source.dll" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\Views\Buttons.cshtml" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\Views\Configure.cshtml" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\Views\PaymentInfo.cshtml" />
+    <None Remove="Plugins\Payments.PayPalSmartPaymentButtons\Views\_ViewImports.cshtml" />
+    <None Remove="Plugins\Shipping.UPS\logo.jpg" />
+    <None Remove="Plugins\Shipping.UPS\Nop.Plugin.Shipping.UPS.deps.json" />
+    <None Remove="Plugins\Shipping.UPS\Nop.Plugin.Shipping.UPS.dll" />
+    <None Remove="Plugins\Shipping.UPS\Nop.Plugin.Shipping.UPS.pdb" />
+    <None Remove="Plugins\Shipping.UPS\plugin.json" />
+    <None Remove="Plugins\Shipping.UPS\Views\Configure.cshtml" />
+    <None Remove="Plugins\Shipping.UPS\Views\_ViewImports.cshtml" />
+    <None Remove="Plugins\Widgets.FacebookPixel\logo.png" />
+    <None Remove="Plugins\Widgets.FacebookPixel\Nop.Plugin.Widgets.FacebookPixel.deps.json" />
+    <None Remove="Plugins\Widgets.FacebookPixel\Nop.Plugin.Widgets.FacebookPixel.dll" />
+    <None Remove="Plugins\Widgets.FacebookPixel\Nop.Plugin.Widgets.FacebookPixel.pdb" />
+    <None Remove="Plugins\Widgets.FacebookPixel\plugin.json" />
+    <None Remove="Plugins\Widgets.FacebookPixel\Views\Configuration\Configure.cshtml" />
+    <None Remove="Plugins\Widgets.FacebookPixel\Views\Configuration\Create.cshtml" />
+    <None Remove="Plugins\Widgets.FacebookPixel\Views\Configuration\Edit.cshtml" />
+    <None Remove="Plugins\Widgets.FacebookPixel\Views\Configuration\_CreateOrUpdate.cshtml" />
+    <None Remove="Plugins\Widgets.FacebookPixel\Views\_ViewImports.cshtml" />
 
     <None Update="Areas\Admin\sitemap.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -117,6 +197,8 @@
       
       More details here: https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals#concurrent-garbage-collection-->
     <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+    <UserSecretsId>a6e4d08f-afab-4dab-8a01-2dbc6d01337e</UserSecretsId>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
 
 </Project>

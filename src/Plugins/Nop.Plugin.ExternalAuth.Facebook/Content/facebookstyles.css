@@ -1,7 +1,16 @@
 ﻿.facebook-btn {
-  display: inline-block;
-  width: 150px;
-  height: 23px;
+ display: flex;
+    width: 355px;
+    height: 60px;
   background-image: url('images/facebook_logo.png');
   background-repeat: no-repeat;
+}
+.external-authentication .title
+{
+	display:none;
+}
+
+.external-authentication .buttons
+{
+	padding-left: 40%;
 }

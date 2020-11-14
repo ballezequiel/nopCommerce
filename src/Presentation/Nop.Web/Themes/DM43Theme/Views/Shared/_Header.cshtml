@@ -1,0 +1,48 @@
+﻿@inject IThemeContext themeContext
+@{
+    var themeName = themeContext.WorkingThemeName;
+}
+<div class="header">
+    <div class="header-logo">
+        @await Component.InvokeAsync("Logo")
+    </div>
+    @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderBefore })
+    <div class="header-upper">
+<div id="header-whatsapp" class="header-whatsapp">
+            <img src="~/Themes/@themeName/Content/images/whatsapp-logo-dm.png" />
+        </div>
+        <div class="header-selectors-wrapper">
+            <span class="menu-bar"><img src="~/Themes/@themeName/Content/images/menu.png" /></span>
+            @await Component.InvokeAsync("TaxTypeSelector")
+            @await Component.InvokeAsync("CurrencySelector")
+            @await Component.InvokeAsync("LanguageSelector")
+            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderSelectors })
+        </div>
+        <div class="header-lower">
+            <div class="search-icon">@T("Search.Button")</div>
+        </div>
+        <div class="header-links-wrapper">
+            @await Component.InvokeAsync("HeaderLinks")
+            @await Component.InvokeAsync("FlyoutShoppingCart")
+        </div>
+    </div>
+    @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderMiddle })
+
+    @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderAfter })
+</div>
+<div class="search-box store-search-box">
+    @await Component.InvokeAsync("SearchBox")
+</div>
+<script>
+function redirectToLink() {
+  window.location.href = 'https://wa.me/5491161261296?text=Hola,%20me%20gustaria%20tener%20mas%20informacion%20acerca%20de:%20'   
+}
+function bindClickWP() { 
+  var el = document.getElementById("header-whatsapp"); 
+  el.addEventListener("click", redirectToLink, false); 
+} 
+
+bindClickWP();
+
+
+</script>
